@@ -1,6 +1,6 @@
 import "./navbar.scss"
 import logo from "../../images/logo.png"
-import AddIcon from '@mui/icons-material/Add';
+import SearchIcon from '@mui/icons-material/Search';
 
 const Navbar = () => {
   return (
@@ -17,7 +17,7 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="right">
-                <AddIcon />
+                <SearchIcon />
             </div>
         </div>
     </div>
