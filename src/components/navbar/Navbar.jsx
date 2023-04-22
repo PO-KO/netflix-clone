@@ -1,10 +1,21 @@
 import "./navbar.scss"
 import logo from "../../images/logo.png"
+import avatar from "../../images/avatar.jpg"
 import SearchIcon from '@mui/icons-material/Search';
+import NotificationsIcon from '@mui/icons-material/Notifications';
+import { ArrowDropDown } from "@mui/icons-material";
+import {useState} from "react"
 
 const Navbar = () => {
+    const [isScrolled, setIsScrolled] = useState(false)
+
+    window.onscroll = () => {
+        setIsScrolled(window.scrollY <= 200 ? false : true)
+        return () => window.onscroll = null
+    }
+
   return (
-    <div className="navbar">
+    <div className={isScrolled ? "navbar scrolled" : "navbar"}>
         <div className="container">
             <div className="left">
                 <img className="logo" src={logo} alt="logo" />
@@ -17,7 +28,22 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="right">
-                <SearchIcon />
+                <div className="search">
+                    <SearchIcon />
+                    {/* <input type="text" placeholder="Search"/> */}
+                </div>
+                <p className="username">Poko</p>
+                <NotificationsIcon />
+                <div className="avatar">
+                    <img src={avatar} alt="avatar" />
+                </div>
+                <div className="profile">
+                    <ArrowDropDown/>
+                    <div className="drop">
+                        <span>Settings</span>
+                        <span>Logout</span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
