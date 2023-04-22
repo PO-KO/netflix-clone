@@ -1,10 +1,10 @@
 import Navbar from "../components/navbar/Navbar"
-import cover from "../images/demon-slayer.jpg"
+import Featured from "../components/featured/Featured"
 import "./home.scss"
 function Home() {
   return (
     <div className="home">
-      <img width="100%" src={cover} alt="cover" />
+      <Featured/>
       <Navbar/>
     </div>
   )
