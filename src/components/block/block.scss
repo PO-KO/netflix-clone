@@ -1,0 +1,43 @@
+
+.block {
+    margin-bottom: 30px;
+    .title {
+        color: white;
+        margin-bottom: 10px;
+    }
+
+    .wrapper {
+        position: relative;
+        overflow: hidden;
+        .indicator {
+            position: absolute;
+            height: 100%;
+            width: 30px;
+            top: 0;
+            color: white;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1;
+            cursor: pointer;
+            &.left {
+                left: 0;
+                background: linear-gradient(to right,rgba(0,0,0,.8) 0%, transparent 88%);
+            }
+            &.right {
+                right: 0;
+                background: linear-gradient(to left,rgba(0,0,0,.8) 0%, transparent 88%);
+            }
+        }
+        &:hover {
+            .indicator {
+                display: flex;
+            }
+        }
+    }
+
+    .content {
+        display: flex;
+        transition: .3s ease;
+    }
+}

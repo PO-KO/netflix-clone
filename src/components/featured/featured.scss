@@ -6,7 +6,7 @@
         &::after {
             content: "";
             position: absolute;
-            background-color: rgba(0,0,0,.1);
+            background: linear-gradient(to bottom, rgba(0,0,0,.2) 0%, rgba(0,0,0,1) 90%);
             width: 100%;
             height: 100%;
             top: 0;
@@ -16,14 +16,12 @@
 
     .text {
         position: absolute;
-        top: 50%;
-
+        top: 30%;
+        display: flex;
+        flex-direction: column;
         .title {
-            font-size: 100px;
-            color: #fcdd00;
-            font-weight: 900;
-            text-transform: uppercase;
-            margin-bottom: 0;
+            width: 250px;
+            margin-bottom: 15px;
         }
 
         .season {
